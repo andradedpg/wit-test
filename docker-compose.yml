@@ -30,4 +30,6 @@ services:
     - ./docker/app/build:/app
     entrypoint: java -jar /app/wit-cicd-challenge.jar
     deploy: 
-      replicas: 1 
+      replicas: 1
+      placement:
+        constraints: [node.role == manager] 
