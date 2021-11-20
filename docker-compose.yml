@@ -1,17 +1,14 @@
 version: '3'
 services:
-  lb: 
-    container_name: lb
-    build: ./.docker/lb/.
-    ports:
-      - 80:80
-    volumes:
-      - ./.docker/lb/cfg:/usr/local/etc/haproxy
+  # lb: 
+  #   build: ./.docker/lb/.
+  #   ports:
+  #     - 80:80
+  #   volumes:
+  #     - ./.docker/lb/cfg:/usr/local/etc/haproxy
 
   proxy:
-    container_name: web
-    build: ./.docker/web/.
-    restart: always
+    build: ./.docker/proxy/.
     ports:
     - 80:80
     - 443:443
@@ -23,10 +20,7 @@ services:
       replicas: 1 
 
   app:
-    container_name: app
     #restart: always
     build: ./.docker/app/.
-    expose:
-      - "8080"
     deploy: 
       replicas: 1 
