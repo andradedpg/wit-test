@@ -27,7 +27,7 @@ services:
     ports:
     - 8080/tcp
     volumes:
-    - ./docker/app/build:/app
+    - ./.docker/app/build/wit-cicd-challenge.jar:/app/wit-cicd-challenge.jar
     entrypoint: java -jar /app/wit-cicd-challenge.jar
     deploy: 
       replicas: 1
