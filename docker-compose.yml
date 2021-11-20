@@ -22,7 +22,9 @@ services:
 
   app:
     #restart: always
-    image: 127.0.0.1:8080/wit-test
+    #image: 127.0.0.1:8080/wit-test
     build: ./.docker/app/.
+    ports:
+    - 8080
     deploy: 
       replicas: 1 
