@@ -30,6 +30,8 @@ services:
     #build: ./.docker/app/.
     ports:
     - 8080/tcp
+    networks:
+    - proxy
     volumes:
     - ./.docker/app/build/wit-cicd-challenge.jar:/app/wit-cicd-challenge.jar
     entrypoint: java -jar /app/wit-cicd-challenge.jar
