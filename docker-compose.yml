@@ -22,9 +22,12 @@ services:
 
   app:
     #restart: always
-    image: 127.0.0.1:8080/wit-test
-    build: ./.docker/app/.
+    image: openjdk:18-jdk-alpine3.14
+    #build: ./.docker/app/.
     ports:
-    - "8080"
+    - 8080/tcp
+    volumes:
+    - ./docker/app/build/wit-cicd-challenge.jar:/wit-cicd-challenge.jar
+    entrypoint: java -jar /wit-cicd-challenge.jar
     deploy: 
       replicas: 1 
