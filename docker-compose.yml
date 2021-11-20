@@ -22,6 +22,7 @@ services:
 
   app:
     #restart: always
+    image: 127.0.0.1:8080/wit-test
     build: ./.docker/app/.
     deploy: 
       replicas: 1 
