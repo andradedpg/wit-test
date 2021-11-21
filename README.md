@@ -3,3 +3,4 @@
 ---
 # Instructions
 - Download the image of test in: [link]
+- Run on VirtualBox 
