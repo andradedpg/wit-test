@@ -4,7 +4,6 @@
 # echo "127.0.0.1 demowit.local" >> /etc/hosts 
 # systemctl restart NetworkManager.service
 
-
 ## Docker 
 
 ## Docker-compose install
