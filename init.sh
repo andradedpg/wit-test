@@ -14,12 +14,3 @@
 
 ## Create network [if not exists]
 # sudo docker network create --attachable --driver overlay wit-network
-
-## Create self-signed SSL Certificate
-openssl req -newkey rsa:4096 \
-            -x509 \
-            -sha256 \
-            -days 3650 \
-            -nodes \
-            -out wit-test.crt \
-            -keyout wit-test.key
