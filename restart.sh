@@ -1,1 +1,1 @@
-docker stack rm wit && doker stack deploy --compose-file docker-compose.yml wit
+docker stack rm wit && docker stack deploy --compose-file docker-compose.yml wit
